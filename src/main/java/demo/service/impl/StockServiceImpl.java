@@ -66,7 +66,7 @@ public class StockServiceImpl implements StockService{
             return sdResponse;
             //return sdResponse.getHigh() + sdResponse.getLow() + sdResponse.getAvg() + sdResponse.getSell();
         } catch (Exception e) {
-            final String errorMessage = "Web Service Call Attempt Failed : " + e.getLocalizedMessage();
+            final String errorMessage = "Web Service Call Attem pt Failed : " + e.getLocalizedMessage();
             log.error(errorMessage);
             System.out.print("E  r R  O R  " + errorMessage );
 
