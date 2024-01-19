@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>search-stock</title>
+</head>
+<body>
+
+<table>
+    <tbody>
+    <h1>Search Result All</h1>
+    <tr th:each="item : ${responselst}">
+        <td th:text="${item.stock_name}"></td>
+        <td th:text="${item.high}"></td>
+        <td th:text="${item.low}"></td>
+        <td th:text="${item.avg}"></td>
+        <td th:text="${item.sell}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+</form>
+</body>
+</html>

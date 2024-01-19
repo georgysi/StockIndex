@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>search-stock</title>
+</head>
+<body>
+
+<h1>Search Result</h1>
+
+<h2  th:text="${sdResponce.stock_name}">Stock</h2>
+<h2  style="display: inline" th:text="${sdResponce.high}">High</h2>
+<h2  style="display: inline" th:text="${sdResponce.low}">Low</h2>
+<h2  style="display: inline" th:text="${sdResponce.avg}">Avg</h2>
+<h2  style="display: inline" th:text="${sdResponce.sell}">Sell</h2>
+
+
+</form>
+</body>
+</html>

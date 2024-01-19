@@ -1,0 +1,26 @@
+version: '4'
+
+services:
+  flyway:
+    image: boxfuse/flyway:5.2.4
+    command: -url=jdbc:mysql://db -schemas=dev_stock -user=root -password=unix11 -connectRetries=60 migrate
+    volumes:
+      - ./src/main/resources/migration:/flyway/sql
+    depends_on:
+      - db
+
+  db:
+    image: mysql
+    environment:
+      - MYSQL_DATABASE=dev_stock
+      - MYSQL_USER=simpkin1
+      - MYSQL_PASSWORD=unix11
+      - MYSQL_ROOT_PASSWORD=unix11
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - 3310:3306
+
+
+
+
+
